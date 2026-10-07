@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>深杯酒满 | Personal Site</title>
+  <style>
+    :root { --ink:#16233a; --muted:#627089; --blue:#2563eb; --line:#e5eaf1; --paper:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:#f8fafc; line-height:1.7; }
+    .wrap { max-width:1120px; margin:auto; padding:0 28px; }
+    header { height:72px; display:flex; justify-content:space-between; align-items:center; }
+    .brand { font-weight:750; font-size:18px; letter-spacing:.02em; }
+    nav { display:flex; gap:24px; color:#4b5970; font-size:14px; }
+    nav a { color:inherit; text-decoration:none; }
+    .hero { min-height:430px; border-radius:18px; padding:76px 70px; display:flex; align-items:center; overflow:hidden; position:relative; background:linear-gradient(121deg,#0b1426 0%,#163557 57%,#315878 100%); color:#fff; }
+    .hero:before { content:""; position:absolute; inset:0; opacity:.9; background-image:linear-gradient(rgba(174,216,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(174,216,255,.09) 1px,transparent 1px); background-size:42px 42px; mask-image:linear-gradient(90deg,transparent,black 54%); }
+    .hero:after { content:""; position:absolute; width:430px; height:430px; right:-110px; top:-155px; border:1px solid rgba(191,219,254,.18); border-radius:50%; box-shadow:0 0 0 64px rgba(191,219,254,.045),0 0 0 128px rgba(191,219,254,.035); animation:orbit 12s ease-in-out infinite alternate; }
+    .hero-inner { max-width:700px; position:relative; z-index:1; }
+    .eyebrow { margin:0 0 14px; color:#a8d1ff; font-size:12px; letter-spacing:.16em; font-weight:650; }
+    h1 { font-family:Georgia,"Songti SC","SimSun",serif; font-size:56px; font-style:italic; font-weight:700; line-height:1.15; letter-spacing:-.06em; margin:0 0 22px; text-shadow:1px 1px 0 rgba(147,197,253,.18); }
+    .hero p { max-width:600px; margin:0 0 31px; color:#d8e4f3; font-size:17px; }
+    .button { background:#3b82f6; color:#fff; display:inline-block; padding:11px 20px; border-radius:8px; font-size:15px; text-decoration:none; font-weight:600; }
+    .seal { position:absolute; right:12%; bottom:48px; z-index:1; width:98px; height:98px; display:grid; place-items:center; border:1px solid rgba(191,219,254,.42); border-radius:50%; color:#c9e2ff; font-family:Georgia,"Songti SC",serif; font-size:21px; transform:rotate(-12deg); animation:float 5s ease-in-out infinite; }
+    main { padding:60px 0 72px; }
+    .intro { max-width:770px; margin-bottom:38px; }
+    h2 { margin:0 0 14px; font-size:26px; letter-spacing:-.02em; }
+    .intro p { color:var(--muted); margin:0; }
+    .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:26px 0 65px; }
+    .card { padding:23px 22px; min-height:174px; background:var(--paper); border:1px solid var(--line); border-radius:12px; text-decoration:none; color:var(--ink); transition:border-color .15s; }
+    .card:hover { border-color:#93c5fd; }
+    .num { color:var(--blue); font-size:12px; font-weight:700; letter-spacing:.1em; }
+    h3 { margin:12px 0 8px; font-size:18px; }
+    .card p { margin:0; color:var(--muted); font-size:14px; line-height:1.7; }
+    .directions { background:#fff; border:1px solid var(--line); border-radius:14px; padding:30px; }
+    ul { padding-left:20px; margin:12px 0 0; columns:2; color:#4b5970; }
+    li { margin:7px 0; }
+    footer { border-top:1px solid var(--line); padding:25px 0 35px; color:#8290a5; font-size:13px; }
+    @keyframes orbit { to { transform:translate(-22px,22px) rotate(8deg); } }
+    @keyframes float { 50% { transform:translateY(-10px) rotate(-8deg); } }
+    @media (max-width:760px) { nav { display:none; } .hero { padding:54px 32px; min-height:390px; } h1 { font-size:38px; } .cards { grid-template-columns:repeat(2,1fr); } ul { columns:1; } }
+    @media (max-width:460px) { .wrap { padding:0 18px; } .hero { border-radius:12px; padding:45px 25px; } .cards { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><div class="brand">深杯酒满 <span style="font-weight:400;color:#8491a4">/ Personal Site</span></div><nav><a href="projects.html">项目</a><a href="notes.html">笔记</a><a href="writings.html">创作</a><a href="about.html">关于</a></nav></header>
+    <section class="hero"><div class="hero-inner"><p class="eyebrow">PERSONAL SITE · 深杯酒满</p><h1>以工程的理性，<br>写文字的浪漫。</h1><p>在代码与故事之间，持续探索。这里记录编程学习、网页开发、AI 工程实践，也收录随笔、技术笔记与文学创作。</p><a class="button" href="about.html">认识我</a></div><div class="seal">深杯<br>酒满</div></section>
+    <main>
+      <section class="intro" id="about"><h2>欢迎来到我的个人主页</h2><p>我是一名飞行器制造工程专业在读学生，一边钻研机械工程，一边自学计算机、大模型与网站开发。同时也是一名网络小说创作者，喜欢古风、奇幻、重生题材的故事写作。</p></section>
+      <section><h2>探索本站</h2><div class="cards"><a class="card" href="projects.html"><span class="num">01 / PROJECTS</span><h3>项目作品集</h3><p>记录个人网站、工具应用与 AI 工程实践。</p></a><a class="card" href="notes.html"><span class="num">02 / NOTES</span><h3>技术笔记</h3><p>整理编程、网络、建站与大模型学习内容。</p></a><a class="card" href="writings.html"><span class="num">03 / WRITINGS</span><h3>文学创作</h3><p>存放小说片段、随笔与关于文字的思考。</p></a><a class="card" href="about.html"><span class="num">04 / ABOUT</span><h3>关于我</h3><p>了解我的专业背景、兴趣方向与成长轨迹。</p></a></div></section>
+      <section class="directions"><h2>我的学习方向</h2><ul><li>Python 编程基础</li><li>静态网站搭建：Astro / AnvilWiki</li><li>计算机网络、Git、Cloudflare Pages</li><li>NLP、RAG、大模型相关学习</li><li>机械工程、理论力学等专业课程</li><li>网络小说与古典文学阅读</li></ul></section>
+    </main>
+    <footer>© 2026 深杯酒满 · 在代码与故事之间，持续探索。</footer>
+  </div>
+</body>
+</html>
